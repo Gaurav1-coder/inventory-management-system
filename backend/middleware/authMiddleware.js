@@ -1,72 +1,81 @@
-const User = require("../models/User");
-const jwt = require("jsonwebtoken");
 
+const jwt=require('jsonwebtoken')
+const User=require('../models/Usermodel')
+require('dotenv').config();
 
-
-const protect = async (req, res, next) => {
+module.exports.authmiddleware = async (req, res, next) => {
   try {
-    const token = req.cookies.token;
-    if (!token) {
-      return res.status(401).json("You're not authorized");
-    }
+    let token = req.cookies.Inventorymanagmentsystem;
 
-    const verified = jwt.verify(token, process.env.SECRET_KEY);
-
-    const user = await User.findById(verified._id).select("-password");
-
-    if (!user) {
-      return res.status(401).json("You're not authorized");
-    }
-    req.user = user;
-    next();
-  } catch (error) {
-    return res.status(401).json("You're not authorized");
-  }
-};
-
-const authGuard = async (req, res, next) => {
-  try {
-    let token;
-    
-    // Check for token in headers
-    if (
-      req.headers.authorization &&
-      req.headers.authorization.startsWith("Bearer")
-    ) {
+    // Check Authorization header if cookie is missing
+    if (!token && req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
       token = req.headers.authorization.split(" ")[1];
-    } 
-    // Check for token in cookies if header is missing
-    else if (req.cookies && req.cookies.token) {
-      token = req.cookies.token;
     }
 
     if (!token) {
-      return res.status(401).json("No token provided");
+      return res.status(401).json({ message: "Unauthorized: No token provided." });
     }
 
-    const decoded = jwt.verify(token, process.env.SECRET_KEY);
-    const user = await User.findById(decoded._id || decoded.id); // Check both common id keys
+ 
+    const decodedToken = jwt.verify(token, process.env.SecretKey);
+
     
-    if (!user) {
-      return res.status(401).json("User not found");
+
+    if (!decodedToken || !decodedToken.userId) {
+      return res.status(401).json({ message: "Unauthorized: Invalid token." });
     }
+
+   
+    const user = await User.findById(decodedToken.userId).select("-password");
+
+    if (!user) {
+      return res.status(401).json({ message: "Unauthorized: User not found." });
+    }
+
     
     req.user = user;
     next();
   } catch (error) {
-    console.error("Auth Guard Error:", error.message);
-    return res.status(401).json("Token invalid or expired");
+    console.error("Token verification error:", error.message);
+    return res.status(401).json({ message: "Unauthorized: Invalid or expired token." });
   }
 };
 
-const adminGuard = (req, res, next) => {
-  if (req.user && req.user.admin) {
-    next();
-  } else {
-    let error = new Error("Not authorized as an admn");
-    error.statusCode = 401;
-    return next(error);
-  }
-};
+  module.exports.adminmiddleware=async(req,res,next)=>{
+    const user=req.user
+    try {
+        if(!user){
+            return res.status(403).json({ message: "Access denied." });
+        }
 
-module.exports = { protect, authGuard, adminGuard };
+        if(user.role!=="admin"){
+            return res.status(403).json({ message: "Access denied. admin role required." });
+        }
+        next()
+    } catch (error) {
+        return res.status(401).json({ message: "Unauthorized: Invalid or expired token." });
+    }
+    
+}
+
+
+
+module.exports.managermiddleware=async(req,res,next)=>{
+    const user=req.user
+    try {
+        if(!user){
+            return res.status(403).json({ message: "Access denied." });
+        }
+
+        if(user.role!=="manager"){
+            return res.status(403).json({ message: "Access denied. manager role required." });
+        }
+        next()
+    } catch (error) {
+        return res.status(401).json({ message: "Unauthorized: Invalid or expired token." });
+    }
+    
+}
+
+
+
