@@ -9,6 +9,7 @@ const addStockTransaction = async (req, res) => {
   }
 };
 
+
 const getStockTransactions = async (req, res) => {
   try {
     const transactions = await StockTransaction.find().populate("product").sort({ createdAt: -1 });

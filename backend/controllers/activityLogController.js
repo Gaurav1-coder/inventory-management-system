@@ -1,6 +1,7 @@
 const ActivityLog = require("../models/ActivityLog");
 
 const addActivityLog = async (req, res) => {
+  
   try {
     const log = await ActivityLog.create(req.body);
     res.status(201).json(log);

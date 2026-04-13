@@ -3,6 +3,9 @@ const ActivityLog = require("../models/ActivityLog");
 const joi = require("joi");
 const cloudinary = require("../config/cloudinary.config");
 
+
+
+
 const addProduct = async (req, res) => {
   try {
     const schema = joi.object({

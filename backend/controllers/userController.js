@@ -9,6 +9,9 @@ const sendEmail = require("../utils/sendEmail");
 
 const generateToken = (id) => {
   return jwt.sign(
+
+
+    
     {
       id,
     },

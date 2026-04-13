@@ -2,6 +2,7 @@ const Notification = require("../models/Notification");
 
 const createNotification = async (req, res) => {
   try {
+    
     const notification = await Notification.create(req.body);
     res.status(201).json(notification);
   } catch (error) {
