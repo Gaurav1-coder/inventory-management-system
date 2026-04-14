@@ -24,5 +24,6 @@ InventorySchema.pre("save", function (next) {
   next();
 });
 
+
 const Inventory= mongoose.model("Inventory", InventorySchema);
 module.exports=Inventory 
