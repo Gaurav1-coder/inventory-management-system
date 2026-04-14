@@ -76,7 +76,6 @@ module.exports.editSupplier = async (req, res) => {
 
     supplier.name = name || supplier.name;
     
-    // Support both flat and nested structure for updates
     if (contactInfo) {
       supplier.contactInfo = {
         phone: contactInfo.phone || supplier.contactInfo.phone,

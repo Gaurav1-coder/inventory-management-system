@@ -39,7 +39,6 @@ const getDashboardStats = async (req, res) => {
       { $sort: { _id: 1 } },
     ]);
 
-    // Format monthly data for frontend charts
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const formattedMonthlySales = monthlySales.map((item) => ({
       month: monthNames[item._id - 1],
