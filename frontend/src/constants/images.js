@@ -1,4 +1,4 @@
-// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport Logo from "../assets/logo.png";
+import Logo from "../assets/logo.png";
 import HeroImage from "../assets/HeroImage.svg";
 import AboutImage from "../assets/about.svg";
 import PostProfileImage from "../assets/posts/post-profile.svg";
@@ -17,4 +17,3 @@ const images = {
 };
 
 export default images;
-

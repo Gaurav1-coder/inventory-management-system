@@ -1,4 +1,4 @@
-// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import MainContent from "../components/MainContent";
@@ -52,4 +52,3 @@ const Home = () => {
 };
 
 export default Home;
-

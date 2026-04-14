@@ -1,4 +1,4 @@
-// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { formatDate } from "../../utils/format";
@@ -160,4 +160,3 @@ const Navbar = ({
 };
 
 export default Navbar;
-

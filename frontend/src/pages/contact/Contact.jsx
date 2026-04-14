@@ -1,4 +1,4 @@
-// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
+import React from "react";
 import MainLayout from "../../components/MainLayout";
 import { images } from "../../constants";
 import { FiPhone, FiMail, FiMapPin, FiUser } from "react-icons/fi";
@@ -86,4 +86,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
