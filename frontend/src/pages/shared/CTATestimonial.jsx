@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { Link } from "react-router-dom";
 
 const CTATestimonial = () => {
@@ -302,3 +302,4 @@ const CTATestimonial = () => {
 };
 
 export default CTATestimonial;
+

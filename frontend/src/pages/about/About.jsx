@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { motion } from "framer-motion";
 import { 
   Rocket, 
@@ -396,3 +396,4 @@ const ChatBot = () => {
 };
 
 export default AboutPage;
+

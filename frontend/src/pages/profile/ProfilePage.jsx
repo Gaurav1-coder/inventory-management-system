@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -190,3 +190,4 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
