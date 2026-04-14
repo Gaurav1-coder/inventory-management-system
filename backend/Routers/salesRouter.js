@@ -13,4 +13,5 @@ router.put("/updatesales/:saleId",updateSale); // Backward compatibility
 
 
 
+
 module.exports = router;

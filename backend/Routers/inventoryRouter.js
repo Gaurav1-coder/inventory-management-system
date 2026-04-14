@@ -11,4 +11,6 @@ router.get("/inventory/:productId", getInventoryByProduct); // Backward compatib
 router.delete("/:productId", deleteInventory); 
 router.delete("/inventory/:productId", deleteInventory); // Backward compatibility 
 
+
+
 module.exports = router;
