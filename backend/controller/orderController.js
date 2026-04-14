@@ -37,7 +37,7 @@ const createOrder = async (req, res) => {
             totalAmount: totalOrderAmount,
             status,
         });
-        // Save the order to the database
+
         await newOrder.save();
         
         res.status(201).json({ success: true, message: "Order created successfully", order: newOrder });

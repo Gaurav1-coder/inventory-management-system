@@ -36,5 +36,3 @@ const SupplierSchema= new mongoose.Schema({
 const Supplier=mongoose.model("Supplier",SupplierSchema)
 
 module.exports=Supplier
-
-//okay

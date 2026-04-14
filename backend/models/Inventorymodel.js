@@ -12,9 +12,7 @@ const InventorySchema = new mongoose.Schema(
 
 );
 
-// Pre-save middleware to update status
-// okay
-// Update status based on quantity
+
 InventorySchema.pre("save", function (next) {
   if (this.quantity === 0) {
     this.status = "out-of-stock";

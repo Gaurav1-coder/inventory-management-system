@@ -24,4 +24,3 @@ router.put("/updateCategory",authmiddleware,adminmiddleware,updateCategory) // B
 
 
 module.exports=router
-//okay

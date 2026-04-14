@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 require('dotenv').config();
 
-// Generate JWT token
+
 const generateToken = async (user, res) => {
   try {
     if (!process.env.SecretKey) {

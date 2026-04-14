@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 
-// okay
+
 
 const OrderSchema= new mongoose.Schema({
 

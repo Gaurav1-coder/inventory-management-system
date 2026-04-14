@@ -12,4 +12,3 @@ router.delete("/:productId", deleteInventory);
 router.delete("/inventory/:productId", deleteInventory); // Backward compatibility 
 
 module.exports = router;
-// okay

@@ -23,4 +23,3 @@ const SaleSchema = new mongoose.Schema(
 const Sale= mongoose.model("Sale", SaleSchema);
 
 module.exports=Sale
-//okay

@@ -10,7 +10,7 @@ module.exports.addOrUpdateInventory = async (req, res) => {
       return res.status(400).json({ success: false, message: "Product and quantity are required" });
     }
 
-    // Check if the product exists
+    
     let inventory = await Inventory.findOne({ product });
 
     if (inventory) {
