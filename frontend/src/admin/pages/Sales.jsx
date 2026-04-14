@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
@@ -321,4 +321,5 @@ const Sales = () => {
 };
 
 export default Sales;
+
 

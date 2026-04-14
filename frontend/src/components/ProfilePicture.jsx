@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { HiOutlineCamera } from "react-icons/hi";
 
@@ -103,3 +103,4 @@ const ProfilePicture = ({ avatar }) => {
 };
 
 export default ProfilePicture;
+

@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 
@@ -41,3 +41,4 @@ const Breadcrumbs = () => {
 };
 
 export default Breadcrumbs;
+

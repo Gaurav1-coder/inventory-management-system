@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useEffect, useState } from "react";
 import axios from "axios";
 import { 
   BarElement, 
@@ -286,3 +286,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

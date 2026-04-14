@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -129,3 +129,4 @@ const CreatorsPage = () => {
 };
 
 export default CreatorsPage;
+

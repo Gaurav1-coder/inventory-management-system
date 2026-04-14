@@ -1,4 +1,4 @@
-export const createImage = (url) =>
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nexport const createImage = (url) =>
   new Promise((resolve, reject) => {
     const image = new Image();
     image.addEventListener("load", () => resolve(image));
@@ -90,3 +90,4 @@ export default async function getCroppedImg(
     });
   });
 }
+

@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -81,3 +81,4 @@ const Sidebar = ({ isClosed }) => {
 };
 
 export default Sidebar;
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState } from "react";
 import Cropper from "react-easy-crop";
 
 import getCroppedImg from "./cropImage";
@@ -113,3 +113,4 @@ const CropEasy = ({ photo, setOpenCrop }) => {
 };
 
 export default CropEasy;
+

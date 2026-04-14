@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport { createSlice } from "@reduxjs/toolkit";
 
 const userInitialState = { userInfo: null };
 
@@ -19,3 +19,4 @@ const userActions = userSlice.actions;
 const userReducer = userSlice.reducer;
 
 export { userActions, userReducer };
+

@@ -1,4 +1,4 @@
-import axios from "axios";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport axios from "axios";
 
 export const signup = async ({ name, email, password, role }) => {
   try {
@@ -92,3 +92,4 @@ export const updateProfilePicture = async ({ token, formData }) => {
     throw new Error(error.message);
   }
 };
+

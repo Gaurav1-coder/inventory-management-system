@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -23,3 +23,4 @@ root.render(
     </Provider>
   </BrowserRouter>
 );
+

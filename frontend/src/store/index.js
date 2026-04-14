@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport { configureStore } from "@reduxjs/toolkit";
 
 import { userReducer } from "./reducers/userReducers";
 
@@ -17,3 +17,4 @@ const store = configureStore({
 });
 
 export default store;
+

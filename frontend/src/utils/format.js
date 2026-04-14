@@ -1,4 +1,4 @@
-export const formatCurrency = (amount) => {
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nexport const formatCurrency = (amount) => {
   return new Number(amount).toLocaleString("en-IN", {
     style: "currency",
     currency: "INR",
@@ -24,3 +24,4 @@ export const formatDateTime = (date) => {
     minute: "2-digit",
   });
 };
+

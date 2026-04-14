@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// FRONTEND AUTO: reviewed on 2026-04-14\r\n/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -26,3 +26,4 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography")],
 };
+

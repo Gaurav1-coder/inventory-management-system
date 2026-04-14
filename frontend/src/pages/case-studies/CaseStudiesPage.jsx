@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Globe, ArrowRight, Quote, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -118,3 +118,4 @@ const CaseStudiesPage = () => {
 };
 
 export default CaseStudiesPage;
+

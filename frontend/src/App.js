@@ -1,6 +1,8 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport { Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
+
+
 
 import "./App.css";
 import HomePage from "./pages/home/HomePage";
@@ -90,3 +92,4 @@ function App() {
 }
 
 export default App;
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Terminal, 
@@ -271,3 +271,4 @@ const APIReferencePage = () => {
 };
 
 export default APIReferencePage;
+

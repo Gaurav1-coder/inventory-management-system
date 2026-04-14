@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
@@ -211,3 +211,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+

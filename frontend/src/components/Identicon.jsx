@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { toSvg } from "jdenticon";
 
 const Identicon = ({ value, size }) => {
@@ -7,3 +7,4 @@ const Identicon = ({ value, size }) => {
 };
 
 export default Identicon;
+

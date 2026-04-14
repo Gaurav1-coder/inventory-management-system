@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, User, LogOut, LayoutDashboard } from "lucide-react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -279,3 +279,4 @@ const Header = () => {
 };
 
 export default Header;
+

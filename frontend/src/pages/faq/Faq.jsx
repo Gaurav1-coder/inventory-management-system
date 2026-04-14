@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, Search, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -159,3 +159,4 @@ const FAQPage = () => {
 };
 
 export default FAQPage;
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState } from "react";
 
 const Table = (props) => {
   const initDataShow =
@@ -73,3 +73,4 @@ const Table = (props) => {
 };
 
 export default Table;
+

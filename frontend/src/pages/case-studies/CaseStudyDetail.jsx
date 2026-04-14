@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { 
@@ -334,3 +334,4 @@ const CaseStudyDetail = () => {
 };
 
 export default CaseStudyDetail;
+

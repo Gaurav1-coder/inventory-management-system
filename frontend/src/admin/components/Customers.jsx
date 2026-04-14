@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import Table from "./Table";
 import customers from "../../data/customers.json";
 const customerTableHead = [
@@ -49,3 +49,4 @@ const Customers = () => {
 };
 
 export default Customers;
+

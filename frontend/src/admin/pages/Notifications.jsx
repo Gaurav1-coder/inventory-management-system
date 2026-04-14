@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
@@ -130,3 +130,4 @@ const Notifications = () => {
 };
 
 export default Notifications;
+

@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import Customers from "./Customers";
 
 const MainContent = ({ isDarkMode }) => {
@@ -149,3 +149,4 @@ const MainContent = ({ isDarkMode }) => {
 };
 
 export default MainContent;
+

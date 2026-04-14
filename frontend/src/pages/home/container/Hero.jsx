@@ -1,4 +1,4 @@
-import React from "react";
+// FRONTEND AUTO: reviewed on 2026-04-14\r\nimport React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart3, ShieldCheck, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -141,3 +141,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
