@@ -5,7 +5,7 @@ module.exports.createSupplier = async (req, res) => {
   try {
     const { name, contact, email, address, contactInfo, productsSupplied } = req.body;
 
-    // Support both flat (frontend) and nested (potential future) structures
+    // Support both flat (frontend) and nested (potential future) structure
     const supplierName = name;
     const finalContactInfo = contactInfo || {
       phone: contact || "",
@@ -63,7 +63,8 @@ module.exports.getSupplierById = async (req, res) => {
 
 
 
-
+// Edit supplier
+// okay
 module.exports.editSupplier = async (req, res) => {
   const { supplierId } = req.params;
   const { name, contact, email, address, contactInfo, productsSupplied } = req.body;

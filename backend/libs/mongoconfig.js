@@ -2,7 +2,7 @@ const mongoose=require("mongoose")
 
 
 require("dotenv").config()
-
+// Connect to MongoDB
 module.exports.MongoDBconfig=()=>{
     mongoose.connect(process.env.MONGODB_URL)
     .then(()=>{

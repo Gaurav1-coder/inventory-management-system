@@ -27,7 +27,7 @@ module.exports.createSale = async (req, res) => {
     productRecord.quantity -= products.quantity;
     await productRecord.save();
 
-
+    // Create a new sale record
     const newSale = new Sale({
       customerName,
       products,

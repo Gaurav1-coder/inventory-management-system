@@ -16,5 +16,5 @@ const logActivity = async ({ action, description, entity, entityId, userId, ipAd
     console.error("Error logging activity:", error);
   }
 };
-
+// Export the logger function
 module.exports = logActivity;

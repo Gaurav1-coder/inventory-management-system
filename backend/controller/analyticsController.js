@@ -39,14 +39,14 @@ const getDashboardStats = async (req, res) => {
       { $sort: { _id: 1 } },
     ]);
 
-    // Format monthly data for frontend charts
+    // Format monthly data for frontend charts.
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const formattedMonthlySales = monthlySales.map((item) => ({
       month: monthNames[item._id - 1],
       total: item.total,
     }));
 
-    // Recent Activity Logs (Last 5)
+    // Recent Activity Logs (Last 5) okay
     const recentLogs = await ActivityLog.find()
       .populate("userId", "name")
       .sort({ createdAt: -1 })

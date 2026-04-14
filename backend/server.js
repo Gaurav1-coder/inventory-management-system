@@ -24,7 +24,6 @@ const app = express();
 const server = http.createServer(app);
 
 const allowedOrigins = [
-  "https://advanced-inventory-management-system.vercel.app",
   "http://localhost:3000",
   "http://localhost:5173",
   "http://127.0.0.1:3000",
