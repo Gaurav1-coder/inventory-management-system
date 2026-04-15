@@ -17,5 +17,4 @@ const logActivity = async ({ action, description, entity, entityId, userId, ipAd
   }
 };
 
-
 module.exports = logActivity;

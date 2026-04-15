@@ -26,5 +26,4 @@ router.get("/Searchdata", authmiddleware, searchOrder);
 router.get("/graphstatusorder",authmiddleware, getOrderStatistics);
 
 
-
 module.exports = router;

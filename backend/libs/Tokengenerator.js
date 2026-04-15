@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 
-
 const generateToken = async (user, res) => {
   try {
     if (!process.env.SecretKey) {

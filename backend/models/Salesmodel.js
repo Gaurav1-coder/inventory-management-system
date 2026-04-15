@@ -20,8 +20,6 @@ const SaleSchema = new mongoose.Schema(
 { timestamps: true }
 );
 
-
 const Sale= mongoose.model("Sale", SaleSchema);
-
 
 module.exports=Sale

@@ -12,5 +12,4 @@ router.put("/:supplierId", editSupplier);
 router.put("/updatesupplier/:supplierId", editSupplier); // Backward compatibility
 router.delete("/:supplierId", deleteSupplier); 
 
-
 module.exports = router;

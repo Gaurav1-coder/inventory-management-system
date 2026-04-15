@@ -1,5 +1,5 @@
 const Product=require('../models/Productmodel')
-const Cloundinary = require('../libs/Cloundinary')
+const Cloundinary = require('../libs/Cloundinary') 
 const logActivity=require('../libs/logger')
 const Notification = require("../models/Notificationmodel");
 
@@ -29,10 +29,10 @@ module.exports.Addproduct=async(req,res)=>{
 
     try {
         const { product, name, description, category, price, quantity, image } = req.body;
-        const productName = product || name;
+        const productName = product || name; 
         
         if (!productName || !category || !description || !price || !quantity) {
-          return res.status(400).json({ message: "Please provide all product details." });
+           return res.status(400).json({ message: "Please provide all product details." });
         }
 
         let imageUrl = "";

@@ -26,7 +26,6 @@ module.exports.addOrUpdateInventory = async (req, res) => {
     }
 
  
-    
     await inventory.save();
 
     res.status(200).json({ success: true, message: "Inventory updated successfully", inventory });
@@ -34,7 +33,6 @@ module.exports.addOrUpdateInventory = async (req, res) => {
     res.status(500).json({ success: false, message: "Error updating inventory", error });
   }
 };
-
 
 
 

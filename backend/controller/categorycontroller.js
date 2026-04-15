@@ -41,6 +41,9 @@ module.exports.createCategory = async (req, res) => {
 };
 
 
+
+
+
 module.exports.RemoveCategory=async(req,res)=>{
     try {
         const {CategoryId}=req.params
@@ -69,6 +72,7 @@ module.exports.RemoveCategory=async(req,res)=>{
         } catch (error) {
             res.status(500).json({ message: "Error deleting Category", error: error.message });
         }
+
 
 }
 
@@ -99,6 +103,7 @@ module.exports.getCategory = async (req, res) => {
   }
 };
 
+  
 
 module.exports.updateCategory=async(req,res)=>{
     try {
@@ -106,6 +111,8 @@ module.exports.updateCategory=async(req,res)=>{
         const {CategoryId}=req.params
         const userId=req.user._id;
         const ipAddress=req.ip
+
+
 
         const updatingCategory=await Category.findByIdAndUpdate(CategoryId,updatedCategory,{new:true})
 
