@@ -77,15 +77,11 @@ app.get("/", (req, res) => {
   res.send("Inventory Management System Backend is running...");
 });
 
-<<<<<<< HEAD
-// Health Check Route
 app.get("/", (req, res) => {
   res.send("Inventory Management System Backend is running...");
 });
 
-=======
->>>>>>> dev
-// Route definitions
+
 app.use('/api/users', authrouter); 
 app.use('/api/product', productrouter);
 app.use('/api/orders', orderrouter);
