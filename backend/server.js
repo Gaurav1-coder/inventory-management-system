@@ -24,7 +24,7 @@ const app = express();
 const server = http.createServer(app);
 
 const allowedOrigins = [
-  "https://advanced-inventory-management-system.vercel.app",
+  "https://inventory-management-system-kf9v-jk9a25oks.vercel.app",
   "http://localhost:3000",
   "http://localhost:5173",
   "http://127.0.0.1:3000",
@@ -32,14 +32,23 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: true, // For development, allow all origins.
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not ' +
+                  'allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
 }));
 
 const io = new Server(server, {
   cors: {
-    origin: true, // For development, allow all origins.
+    origin: allowedOrigins,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   },
@@ -70,6 +79,11 @@ app.use(express.json({limit: "10mb"}));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.set("io", io);
 app.use(cookieParser());
+
+// Health Check Route
+app.get("/", (req, res) => {
+  res.send("Inventory Management System Backend is running...");
+});
 
 // Aligning backend routes with frontend expectations
 app.use('/api/users', authrouter); // Frontend uses /api/users

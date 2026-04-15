@@ -114,6 +114,10 @@ const Dashboard = () => {
 
   const chartData = getChartData();
 
+  const chartTitle = monthlySales && monthlySales.length > 0
+    ? 'Monthly Revenue Overview'
+    : 'Top 10 Products Stock Levels';
+
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
@@ -123,7 +127,7 @@ const Dashboard = () => {
       },
       title: {
         display: true,
-        text: 'Top 10 Products Stock Levels',
+        text: chartTitle,
       },
     },
     scales: {
@@ -218,7 +222,7 @@ const Dashboard = () => {
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-bold dark:text-white flex items-center gap-2">
             <i className="bx bx-trending-up text-primary dark:text-blue-400"></i>
-            Monthly Revenue Overview
+            {chartTitle}
           </h3>
         </div>
         {isLoading ? (
@@ -251,7 +255,7 @@ const Dashboard = () => {
         <div className="orders bg-white dark:bg-white/5 dark:backdrop-blur-md dark:border dark:border-white/10 shadow-xl rounded-2xl transition-all duration-300" style={{ padding: '28px' }}>
           <div className="header" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
             <div className="p-2 bg-primary/10 dark:bg-blue-500/20 rounded-lg">
-              <i className="bx bx-history" style={{ fontSize: '24px', color: 'var(--primary)' }} className="text-primary dark:text-blue-400"></i>
+              <i className="bx bx-history text-primary dark:text-blue-400" style={{ fontSize: '24px', color: 'var(--primary)' }}></i>
             </div>
             <h3 className="text-lg font-bold dark:text-white">Recent Activity</h3>
           </div>
