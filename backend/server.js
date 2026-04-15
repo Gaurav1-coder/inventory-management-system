@@ -24,15 +24,20 @@ const server = http.createServer(app);
 
 // CORS configuration: better to allow all origins during development or explicitly list production URLs
 const allowedOrigins = [
-  "https://advanced-inventory-management-system.vercel.app",
-  "http://localhost:3000",
-  "http://localhost:5173",
-  "http://127.0.0.1:3000",
-  "http://127.0.0.1:5173"
+  "https://inventory-management-system-kf9v-jk9a25oks.vercel.app", // Production frontend
+  "http://localhost:3000" // Example for local development
 ];
 
+// Configure CORS to allow specific origins
 app.use(cors({
-  origin: true, // For development, allow all origins.
+  origin: (origin, callback) => {
+    // If no origin (like mobile or curl requests), allow
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS policy does not allow access from this origin'), false);
+  },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true, // This allows cookies to be sent with requests
 }));
@@ -72,11 +77,14 @@ app.get("/", (req, res) => {
   res.send("Inventory Management System Backend is running...");
 });
 
+<<<<<<< HEAD
 // Health Check Route
 app.get("/", (req, res) => {
   res.send("Inventory Management System Backend is running...");
 });
 
+=======
+>>>>>>> dev
 // Route definitions
 app.use('/api/users', authrouter); 
 app.use('/api/product', productrouter);
