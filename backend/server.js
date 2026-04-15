@@ -33,7 +33,11 @@ app.use(cors({
   origin: (origin, callback) => {
     // If no origin (like mobile or curl requests), allow
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
+    
+    const isAllowed = allowedOrigins.includes(origin) || 
+                     (origin.startsWith('https://inventory-management-system') && origin.endsWith('.vercel.app'));
+
+    if (isAllowed) {
       return callback(null, true);
     }
     return callback(new Error('CORS policy does not allow access from this origin'), false);
@@ -44,7 +48,15 @@ app.use(cors({
 
 const io = new Server(server, {
   cors: {
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      const isAllowed = allowedOrigins.includes(origin) || 
+                       (origin.startsWith('https://inventory-management-system') && origin.endsWith('.vercel.app'));
+      if (isAllowed) {
+        return callback(null, true);
+      }
+      return callback(new Error('CORS policy does not allow access from this origin'), false);
+    },
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   },
