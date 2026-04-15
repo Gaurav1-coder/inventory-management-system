@@ -77,10 +77,6 @@ app.get("/", (req, res) => {
   res.send("Inventory Management System Backend is running...");
 });
 
-app.get("/", (req, res) => {
-  res.send("Inventory Management System Backend is running...");
-});
-
 
 app.use('/api/users', authrouter); 
 app.use('/api/product', productrouter);
