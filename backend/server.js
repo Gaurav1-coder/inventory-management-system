@@ -24,13 +24,8 @@ const app = express();
 const server = http.createServer(app);
 
 const allowedOrigins = [
-  "https://inventory-management-system-kf9v-jk9a25oks.vercel.app",
-  "http://localhost:3000",
-  "http://localhost:5173",
-  "http://127.0.0.1:3000",
-  "http://127.0.0.1:5173"
-];
-
+  "https://inventory-management-system-kf9v-jk9a25oks.vercel.app"
+]
 app.use(cors({
   origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps or curl requests)
