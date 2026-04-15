@@ -10,7 +10,24 @@ import store from "./store";
 import axios from "axios";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = process.env.REACT_APP_API_URL || "http://localhost:5005";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || "https://inventory-management-system-ptg9.onrender.com";
+
+// Add a request interceptor to attach the JWT token
+axios.interceptors.request.use(
+  (config) => {
+    const userInfo = localStorage.getItem("account")
+      ? JSON.parse(localStorage.getItem("account"))
+      : null;
+    
+    if (userInfo && userInfo.token) {
+      config.headers.Authorization = `Bearer ${userInfo.token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 const queryClient = new QueryClient();
 
